@@ -36,6 +36,18 @@ yarn build
 
 Strapi gives you many possible deployment options for your project including [Strapi Cloud](https://cloud.strapi.io). Browse the [deployment section of the documentation](https://docs.strapi.io/dev-docs/deployment) to find the best solution for your use case.
 
+## ⚙️ Production
+
+<https://docs.strapi.io/dev-docs/installation/docker#why-doesnt-strapi-provide-official-docker-images>
+
+```bash
+docker build \
+  --build-arg NODE_ENV=production \
+  # --build-arg STRAPI_URL=https://api.example.com \ # Uncomment to set the Strapi Server URL
+  -t cms-starter:latest \ 
+  -f Dockerfile.production .
+```
+
 ## 📚 Learn more
 
 - [Resource center](https://strapi.io/resource-center) - Strapi resource center.
